@@ -1,0 +1,9 @@
+flask
+typing_extensions
+langchain
+langgraph
+transformers
+pandas
+langchain_groq
+google-generativeai
+

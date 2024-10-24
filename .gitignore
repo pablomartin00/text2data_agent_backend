@@ -1,0 +1,11 @@
+# Ignorar directorios específicos
+app/.ipynb_checkpoints/
+app/agentlogs/
+
+# Ignorar archivos de configuración
+.env.development
+.env.production
+
+# Ignorar archivos compilados de Python y directorios __pycache__
+*.pyc
+__pycache__/
