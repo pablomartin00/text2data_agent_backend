@@ -5,15 +5,17 @@ from logging.handlers import TimedRotatingFileHandler
 import uuid  # Importación de uuid
 
 class BaseAgent:
-    def __init__(self, llm, tokenizer, planning_llm,long_ctx_llm, log_level='INFO', log_file=None, logging_enabled=True):
+    def __init__(self, llm, tokenizer, planning_llm, long_ctx_llm, log_level='INFO', log_file=None, logging_enabled=True):
         self.tokenCounter = 0
         self.llm = llm
         self.planning_llm = planning_llm
-        self.long_ctx_llm = long_ctx_llm
+        self.long_ctx_llm = long_ctx_llm 
         self.tokenizer = tokenizer
         self.logger = logging.getLogger(f"{__name__}.{id(self)}")
         self.logger.propagate = False
         self.logging_enabled = logging_enabled
+        
+        
         #self.st_session = None
 
         if self.logging_enabled:
